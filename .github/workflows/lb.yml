@@ -20,6 +20,7 @@ jobs:
         cd fftw-3.3.8
         ./configure
         make
+        make install
     - name: make
       run: make FFTW=/home/runner/work/lb-unofficial/lb-unofficial/fftw-3.3.8
     - name: make check
