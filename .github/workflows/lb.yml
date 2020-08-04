@@ -19,7 +19,7 @@ jobs:
         tar -xzvf fftw-3.3.8.tar.gz
         cd fftw-3.3.8
         ./configure
-        make && make install
+        make
     - name: make
       run: make
     - name: make check
