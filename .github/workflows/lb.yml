@@ -18,7 +18,7 @@ jobs:
         wget http://www.fftw.org/fftw-3.3.8.tar.gz
         tar -xzvf fftw-3.3.8.tar.gz
         cd fftw-3.3.8
-        ./configure
+        ./configure --prefix=/home/runner/work/lb-unofficial/lb-unofficial/fftw-3.3.8/
         make
         make install
     - name: make
