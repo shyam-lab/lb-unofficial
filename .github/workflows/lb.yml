@@ -21,7 +21,7 @@ jobs:
         ./configure
         make
     - name: make
-      run: make
+      run: make FFTW=/home/runner/work/lb-unofficial/lb-unofficial/fftw-3.3.8
     - name: make check
       run: make check
     - name: make distcheck
