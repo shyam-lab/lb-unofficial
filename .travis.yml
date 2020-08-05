@@ -8,16 +8,12 @@ script:
   - wget http://www.fftw.org/fftw-3.3.8.tar.gz
   - tar -xzvf fftw-3.3.8.tar.gz
   - cd fftw-3.3.8
-  - ./configure
+  - ./configure --prefix=/home/travis/build/shyam-lab/lb-unofficial/fftw-3.3.8/
   - make
   - make install
   # Wraps the compilation with the Build Wrapper to generate configuration (used
   # later by the SonarScanner) into the "bw-output" folder
-  - build-wrapper-linux-x86-64 --out-dir bw-output make FFTW=/usr/local/fftw/
+  - build-wrapper-linux-x86-64 --out-dir bw-output make FFTW=/home/travis/build/shyam-lab/lb-unofficial/fftw-3.3.8/
   # And finally run the SonarCloud analysis - read the "sonar-project.properties"
   # file to see the specific configuration
-  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
-
-cache:
-  directories:
-    - '$HOME/.sonar/cache'
+  - sonar-scanner -X -Dsonar.cfamily.build-wrapper-output=bw-output
