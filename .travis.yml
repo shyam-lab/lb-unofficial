@@ -7,8 +7,7 @@ compiler:
 addons:
   sonarcloud:
     organization: "shyam-lab"
-    token:
-      secure: "o+02mGeOzUwAF1BN/pZm1wyU1kSjkVrttcpTcytKtIqk7cb8d/XIm9XFxSOaURf3d6D/+CUKYFND3TP44NgolBKL+F7ZIeCwyhpq1h3vikNP/fZ6j6qsA5xUByrujQh6GDLeAGr3smSIh8AWb5sC96F8eDc+rXpYBeGWatSj6X1eZxU5xcRzJIAYDdw8cxXn8C1n97AK6QdLhGp/8gciNuDLc7VOV6mEJuW/oqcEdevppe6X5hNQeoffMuvT+X7Pbd/xelBKzxyMaDBh1Ffd8zCiuuVa2YmEOHR6FhdqkiRgLjdw8ersXXmpDa4jMNEF1+m+MBZ4Jw3igJPOnXhXFDsNYtx25ViBEIdJYAQrHwAbPrC9ytJYKlElhELHT2IKFgU+3VuSY44RWDaG6Uy9KN/3UGBWQtki2iC3DOHOssG5e6cr/8LI3NC3W1ZNJoBQ/i6pFArsXL/7ZCVzX+st0ryyEiLnuGWTwuKqTWZUa4YW0SUtkX230fFzAVLTgU7fsSamrcSX2fPfuKqxBplwCi1yyUJlQVWiIcJyweOCnPKEX+vVVSYRd4b6YN3sW8P9NCpXfS8XGNFl7LScQ5wCAaxVBy8pBXvZjcED6AZHWL91gKodZe2O+uWbDagfdFjMsxsqnmvImCBdzmPiUpzVwuFXKSD1ymNoOLSGQiR4Kfk="
+    token: ${SONAR_TOKEN}
 
 script:
   - wget http://www.fftw.org/fftw-3.3.8.tar.gz
