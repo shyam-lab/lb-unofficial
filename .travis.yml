@@ -5,12 +5,12 @@ addons:
       secure: "v331QFkJw8zvaXWZxgdDSdZ1TFPqMelbzp+1O2G7TN7GZIauvH4g/EetDQGXgSi63KaS/gVnbA+7guz3KGBxSa9LbyUe+T/iRgQtKzazfaOFDIlVvFqN/zAEwtULAsfzf8xTkFC4DyClAJVZYuBLTN1lJ1DccfyK7hNXGr+FB7XN4/iNKDKz4nCzAduvSco4VHdnoNBCAs3Tlg/qjYt97DRCQKNEoa8dHUamD5KGPYFPcH2U9rg2xe/5kJU6r2s5smJFbSnKrNObW4LuYY8saAHG27TEe2HKUXurxmHZTlZzKnE/Pmx5MnMt2hnhgrjLAQicFUJ7RkzX2Ra394oBm6v7qQSWvgDxysn2E9sm5LvV8j+ia4y96tH4NJt9eBI2m2Y//l+/RnIWQkyHyOa9vVApUfUfEnKglBsyePfLeZFzfqD9CO4d6gtLN0ll6Ij0I9sVeTMRw6Z8ZOBerYPliKcFO72SC0X/D+ZRVe4WXCd6JD2x9S0+1jAz8HQzEk3lMdEu6pX0tlYgqM19nJGBc0QQmEV6iCrZaH4YkTNf6TQbmti1FQZLBKLo9tAGv9DvMZHnFvjwW6ERkj1EpMVRy69T+FYqjlMwkaXsD/q4ODk42vOLEyEJ/2fHTwB5OKVpl8LuqL0no55HB3eulIg5TqGdYv85rufLL5MWIvYNvo0="
 
 script:
-   -wget http://www.fftw.org/fftw-3.3.8.tar.gz
-   -tar -xzvf fftw-3.3.8.tar.gz
-   - cd fftw-3.3.8
-   - ./configure
-   - make
-   - make install
+  - wget http://www.fftw.org/fftw-3.3.8.tar.gz
+  - tar -xzvf fftw-3.3.8.tar.gz
+  - cd fftw-3.3.8
+  - ./configure
+  - make
+  - make install
   # Wraps the compilation with the Build Wrapper to generate configuration (used
   # later by the SonarScanner) into the "bw-output" folder
   - build-wrapper-linux-x86-64 --out-dir bw-output make FFTW=/usr/local/fftw/
