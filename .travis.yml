@@ -18,7 +18,7 @@ script:
   - make install
   - cd ..
   - build-wrapper-linux-x86-64 --out-dir bw-output make FFTW=/home/travis/build/shyam-lab/lb-unofficial/fftw-3.3.8/
-  - sonar-scanner -X
+  - travis_wait 60 sonar-scanner -X
 
 cache:
   directories:
