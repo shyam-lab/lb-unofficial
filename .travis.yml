@@ -16,8 +16,9 @@ script:
   - ./configure --prefix=/home/travis/build/shyam-lab/lb-unofficial/fftw-3.3.8/
   - make
   - make install
+  - cd ..
   - build-wrapper-linux-x86-64 --out-dir bw-output make FFTW=/home/travis/build/shyam-lab/lb-unofficial/fftw-3.3.8/
-  - sonar-scanner -X -Dproject.settings=./sonar-project.properties
+  - sonar-scanner -X
 
 cache:
   directories:
