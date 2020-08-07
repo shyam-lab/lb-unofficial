@@ -21,10 +21,7 @@ jobs:
         ./configure --prefix=/home/runner/work/lb-unofficial/lb-unofficial/fftw-3.3.8/
         make
         make install
+        cd ..
     - name: make
       run: make FFTW=/home/runner/work/lb-unofficial/lb-unofficial/fftw-3.3.8
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@v1.3
-      with:
-        # Set the sonar.projectBaseDir analysis property
-        projectBaseDir: .
+
