@@ -24,4 +24,23 @@ jobs:
         cd ..
     - name: make
       run: make FFTW=/home/runner/work/lb-unofficial/lb-unofficial/fftw-3.3.8
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v1.1.0
+      with:
+        dockerfile: docker_lr/Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
+        # Docker repository to tag the image with
+        repository: shyamlab/lr_unofficial
+        tags: latest
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v1.1.0
+      with:
+        dockerfile: docker_lrs/Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+        # Docker repository to tag the image with
+        repository: shyamlab/lrs_unofficial
+        tags: latest
